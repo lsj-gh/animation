@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RippleView">
+        <attr name="rv_alpha" format="integer" />
+        <attr name="rv_framerate" format="integer" />
+        <attr name="rv_duration" format="integer" />
+        <attr name="rv_color" format="color" />
+        <attr name="rv_centered" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SwitchView">
+        <attr name="sv_footColor" format="color" />
+        <attr name="sv_faceRoundColor" format="color" />
+        <attr name="sv_faceColor" format="color" />
+        <attr name="sv_faceCircularSize" format="float" />
+        <attr name="sv_faceCircularColor" format="color" />
+        <attr name="isOpened" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="RotateImageView">
+        <attr name="rotateSrc" format="reference" />
+        <attr name="isRound" format="boolean" />
+        <attr name="rotateDuration" format="integer" />
+        <attr name="rotateStartOff" format="integer" />
+        <attr name="rotateRepeatCount" format="integer" />
+    </declare-styleable>
+</resources>

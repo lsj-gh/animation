@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="lisangdu">亮度</string>
+    <string name="duibidu">对比度</string>
+    <string name="ruilidu">锐利度</string>
+    <string name="sedu">色度u</string>
+    <string name="huidu">灰度</string>
+    <string name="sedu_v">色度v</string>
+</resources>
