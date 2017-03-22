@@ -35,10 +35,7 @@ public class MainActivity extends AppCompatActivity {
         });
         rippleView = (RippleView) findViewById(R.id.rv1);
         rippleViews = (RippleView) findViewById(R.id.rv2);
-//        rippleViews.setAlpha(1.0f);
 
-
-//        rippleView.setRippleColor(R.color.colorblick);
         rippleView.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
             @Override
             public void onComplete(RippleView rippleView) {
@@ -55,12 +52,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         sv_button = (SwitchView) findViewById(R.id.sv_button);
-//        sv_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Log.e("setOnStateChan", "按钮打开了");
-//            }
-//        });
         sv_button.setOnStateChangedListener(new SwitchView.OnStateChangedListener() {
             @Override
             public void toggleToOn(SwitchView view) {
