@@ -1,5 +1,6 @@
 package com.example.administrator.myapplication.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         rippleViews.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
             @Override
             public void onComplete(RippleView rippleView) {
-//                startActivity(new Intent(MainActivity.this, TwoActivity.class));
+                startActivity(new Intent(MainActivity.this, TwoActivity.class));
                 Log.w("hahaha", 222222 + "");
             }
         });

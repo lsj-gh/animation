@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="appcompat-v7-23.4.0">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../../../android-sdk-windows/.android/build-cache/c1668e2675c3444b6936b2e4efb74ea16962fadb/output/res" />
-      <root url="jar://$PROJECT_DIR$/../../../android-sdk-windows/.android/build-cache/c1668e2675c3444b6936b2e4efb74ea16962fadb/output/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../android-sdk-windows/.android/build-cache/402abc6263b06ace0a8eb0842f7ed54cf6ecd00f/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../android-sdk-windows/.android/build-cache/402abc6263b06ace0a8eb0842f7ed54cf6ecd00f/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../android-sdk-windows/extras/android/m2repository/com/android/support/appcompat-v7/23.4.0/appcompat-v7-23.4.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../android-sdk-windows/extras/android/m2repository/com/android/support/appcompat-v7/23.4.0/appcompat-v7-23.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
