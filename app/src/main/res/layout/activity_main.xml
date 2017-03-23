@@ -54,8 +54,7 @@
         <com.example.administrator.myapplication.view.SwitchView
             android:id="@+id/sv_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
         <com.example.administrator.myapplication.view.SwitchView
             android:layout_width="wrap_content"
@@ -83,15 +82,25 @@
 
         <com.example.administrator.myapplication.view.RotateImageView
             android:id="@+id/rotateimageview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:rotateSrc="@drawable/ic_profil_plus"
-            />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorblick"
+            app:ani_type="scale"
+            app:rotateSrc="@drawable/ic_profil_plus" />
 
         <com.example.administrator.myapplication.view.RotateImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
+            app:ani_type="rotate"
+            app:rotateDuration="1000"
+            app:rotateSrc="@drawable/ic_profil_plus" />
+
+        <com.example.administrator.myapplication.view.RotateImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            app:ani_type="rotate"
             app:isRound="true"
             app:rotateDuration="1000"
             app:rotateSrc="@drawable/ic_profil_plus" />

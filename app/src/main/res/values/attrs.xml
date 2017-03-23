@@ -21,5 +21,9 @@
         <attr name="rotateDuration" format="integer" />
         <attr name="rotateStartOff" format="integer" />
         <attr name="rotateRepeatCount" format="integer" />
+        <attr name="ani_type" format="enum">
+            <enum name="rotate" value="0" />
+            <enum name="scale" value="1" />
+        </attr>
     </declare-styleable>
 </resources>

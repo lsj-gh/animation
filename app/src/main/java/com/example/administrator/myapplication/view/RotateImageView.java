@@ -9,6 +9,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -22,6 +23,11 @@ public class RotateImageView extends LinearLayout {
     private int rotateDuration = 500;//速度
     private int rotateStartOff = 500;//间隔时间
     private int rotateRepeatCount = -1;//循环次数
+    private int aniType = 0;
+
+    public Drawable getRotateSrc() {
+        return rotateSrc;
+    }
 
     public int getRotateDuration() {
         return rotateDuration;
@@ -33,6 +39,15 @@ public class RotateImageView extends LinearLayout {
 
     public int getRotateRepeatCount() {
         return rotateRepeatCount;
+    }
+
+    public AnimationType getAnimationType() {
+        return AnimationType.values()[aniType];
+    }
+
+    public void setAnimationType(AnimationType animationType) {
+        this.aniType = animationType.ordinal();
+
     }
 
     public void setRotateDuration(int rotateDuration) {
@@ -55,9 +70,6 @@ public class RotateImageView extends LinearLayout {
         isComplete = complete;
     }
 
-    public Drawable getRotateSrc() {
-        return rotateSrc;
-    }
 
     public boolean isComplete() {
         return isComplete;
@@ -85,23 +97,31 @@ public class RotateImageView extends LinearLayout {
         rotateDuration = typedArray.getInt(R.styleable.RotateImageView_rotateDuration, rotateDuration);
         rotateStartOff = typedArray.getInt(R.styleable.RotateImageView_rotateStartOff, rotateStartOff);
         rotateRepeatCount = typedArray.getInt(R.styleable.RotateImageView_rotateRepeatCount, rotateRepeatCount);
+        aniType = typedArray.getInt(R.styleable.RotateImageView_ani_type, aniType);
         LayoutInflater.from(context).inflate(R.layout.view_rotateimageview_layout, this);
         loadImage = (ImageView) findViewById(R.id.image);
         loadImage.setImageDrawable(rotateSrc);
 
-        createAnimation(isComplete);
+
+        if (aniType == 0){
+            createRotateAnimation(isComplete);
+        }else if(aniType == 1){
+            createScaleAnimation();
+        }
     }
 
-    private void createAnimation(boolean isComplete) {
+    private void createRotateAnimation(boolean isComplete) {
         if (isComplete) {
-            RotateAnimation ta = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+            RotateAnimation ta = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation
+                    .RELATIVE_TO_SELF, 0.5f);
             ta.setInterpolator(new LinearInterpolator());
             ta.setRepeatCount(rotateRepeatCount);
             ta.setDuration(rotateDuration);
             loadImage.startAnimation(ta);
             invalidate();
         } else {
-            RotateAnimation tar = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+            RotateAnimation tar = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation
+                    .RELATIVE_TO_SELF, 0.5f);
             tar.setStartOffset(rotateStartOff);
             tar.setInterpolator(new AccelerateDecelerateInterpolator());
             tar.setRepeatCount(rotateRepeatCount);
@@ -110,6 +130,28 @@ public class RotateImageView extends LinearLayout {
             invalidate();
         }
 
+    }
+
+    private void createScaleAnimation() {
+        ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 5f, 1.0f, 5f, Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleAnimation.setDuration(500);
+        scaleAnimation.setRepeatCount(-1);
+        scaleAnimation.setRepeatMode(Animation.REVERSE);
+        loadImage.startAnimation(scaleAnimation);
+        invalidate();
+
+    }
+
+    public enum AnimationType {
+        ROTATE(0),
+        SCALE(1);
+
+        int type;
+
+        AnimationType(int type) {
+            this.type = type;
+        }
     }
 
 }
