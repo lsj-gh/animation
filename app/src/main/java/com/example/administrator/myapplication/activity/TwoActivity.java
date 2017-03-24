@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.administrator.myapplication.R;
-
+//这是github上更改的，能不能更新？
 public class TwoActivity extends AppCompatActivity {
 
     @Override
