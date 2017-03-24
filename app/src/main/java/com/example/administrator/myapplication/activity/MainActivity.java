@@ -7,6 +7,7 @@ import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,57 +17,43 @@ import com.example.administrator.myapplication.adapter.RippleListAdapter;
 import com.example.administrator.myapplication.view.RippleView;
 import com.example.administrator.myapplication.view.SwitchView;
 
-public class MainActivity extends AppCompatActivity {
-    private RippleView rippleView, rippleViews;
-    private ListView listView;
-    private RippleListAdapter listAdapter;
-    SwitchView sv_button;
-    TextView textView;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button bt1, bt2, bt3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        listView = (ListView) findViewById(R.id.listview);
-        listAdapter = new RippleListAdapter(this);
-        listView.setAdapter(listAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this, "这是第" + i + "个item", Toast.LENGTH_SHORT).show();
-            }
-        });
-        rippleView = (RippleView) findViewById(R.id.rv1);
-        rippleViews = (RippleView) findViewById(R.id.rv2);
+        setContentView(R.layout.activity_main_new);
 
-        rippleView.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
-            @Override
-            public void onComplete(RippleView rippleView) {
-                Log.i("TAG", "点击了");
+        initdata();
+    }
 
-            }
-        });
-        rippleViews.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
-            @Override
-            public void onComplete(RippleView rippleView) {
-                startActivity(new Intent(MainActivity.this, TwoActivity.class));
-                Log.w("hahaha", 222222 + "");
-            }
-        });
+    private void initdata() {
+        bt1 = (Button) findViewById(R.id.bt1);
+        bt2 = (Button) findViewById(R.id.bt2);
+        bt3 = (Button) findViewById(R.id.bt3);
+        bt1.setOnClickListener(MainActivity.this);
+        bt2.setOnClickListener(MainActivity.this);
+        bt3.setOnClickListener(MainActivity.this);
+    }
 
-        sv_button = (SwitchView) findViewById(R.id.sv_button);
-        sv_button.setOnStateChangedListener(new SwitchView.OnStateChangedListener() {
-            @Override
-            public void toggleToOn(SwitchView view) {
-                sv_button.toggleSwitch(true);//更新按钮状态
-                Log.e("setOnStateChan","按钮打开了");
-            }
-            @Override
-            public void toggleToOff(SwitchView view) {
-                sv_button.toggleSwitch(false);//更新按钮状态
-                Log.e("setOnStateChan","按钮关闭了");
-            }
-        });
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.bt1:
+                startActivity(ClickActivity.class);
+                break;
+            case R.id.bt2:
+                startActivity(MySwitchActivity.class);
+                break;
+            case R.id.bt3:
+                startActivity(RotateAndScaleActivity.class);
+                break;
+        }
+    }
+
+    private void startActivity(Class activity) {
+        startActivity(new Intent(MainActivity.this, activity));
     }
 
 }

@@ -133,10 +133,11 @@ public class RotateImageView extends LinearLayout {
     }
 
     private void createScaleAnimation() {
-        ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 5f, 1.0f, 5f, Animation.RELATIVE_TO_SELF, 0.5f,
+        ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 1.5f, 1.0f, 1.5f, Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
-        scaleAnimation.setDuration(500);
+        scaleAnimation.setDuration(1000);
         scaleAnimation.setRepeatCount(-1);
+        scaleAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
         scaleAnimation.setRepeatMode(Animation.REVERSE);
         loadImage.startAnimation(scaleAnimation);
         invalidate();
