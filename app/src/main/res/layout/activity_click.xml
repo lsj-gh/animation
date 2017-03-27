@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:background="#777"
-    tools:context="com.example.administrator.myapplication.activity.ClickActivity">
+    tools:context="com.example.administrator.myapplication.activity.MyClickActivity">
     <com.example.administrator.myapplication.view.RippleView
         android:id="@+id/rv1"
         android:layout_width="wrap_content"

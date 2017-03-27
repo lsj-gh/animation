@@ -15,14 +15,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RotateAndScaleActivity"/>
-        <activity android:name=".activity.ClickActivity">
+        <activity android:name=".activity.MySearchNotRoundActivity"/>
+        <activity android:name=".activity.MyClickActivity">
         </activity>
         <activity android:name=".activity.MySwitchActivity">
         </activity>
         <activity android:name=".activity.MyPopActivity">
         </activity>
         <activity android:name=".activity.MyDiaActivity">
+        </activity>
+        <activity android:name=".activity.MyNewCallActivity">
         </activity>
     </application>
 

@@ -4,80 +4,24 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="#777"
+              android:background="#191A1A"
               android:orientation="vertical"
               tools:context="com.example.administrator.myapplication.activity.TwoActivity">
 
-    <LinearLayout
+
+    <com.example.administrator.myapplication.view.RotateImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="40dp"
+        app:ani_type="rotate"
+        app:rotateSrc="@drawable/search1"/>
 
-        <com.example.administrator.myapplication.view.RotateImageView
-            android:id="@+id/rotateimageview"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="#00000000"
-            app:ani_type="scale"
-            app:rotateSrc="@drawable/ic_profil_plus"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="来电话时候头像缩放"
-            android:textColor="#ffffff"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
-
-        <com.example.administrator.myapplication.view.RotateImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            app:ani_type="rotate"
-            app:rotateSrc="@drawable/ic_profil_plus"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="半旋转的搜索条"
-            android:textColor="#ffffff"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
-
-        <com.example.administrator.myapplication.view.RotateImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            app:ani_type="rotate"
-            app:isRound="true"
-            app:rotateSrc="@drawable/ic_profil_plus"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="全旋转的搜索条"
-            android:textColor="#ffffff"
-            />
-    </LinearLayout>
-
+        android:layout_gravity="center_horizontal"
+        android:text="正在搜索"
+        android:textSize="30sp"
+        android:textColor="#EDEDED"/>
 </LinearLayout>
