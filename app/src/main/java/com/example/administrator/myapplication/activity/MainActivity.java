@@ -18,23 +18,27 @@ import com.example.administrator.myapplication.view.RippleView;
 import com.example.administrator.myapplication.view.SwitchView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button bt1, bt2, bt3;
+    private Button bt1, bt2, bt3, bt4, bt5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_new);
 
-        initdata();
+        initData();
     }
 
-    private void initdata() {
+    private void initData() {
         bt1 = (Button) findViewById(R.id.bt1);
         bt2 = (Button) findViewById(R.id.bt2);
         bt3 = (Button) findViewById(R.id.bt3);
+        bt4 = (Button) findViewById(R.id.bt4);
+        bt5 = (Button) findViewById(R.id.bt5);
         bt1.setOnClickListener(MainActivity.this);
         bt2.setOnClickListener(MainActivity.this);
         bt3.setOnClickListener(MainActivity.this);
+        bt4.setOnClickListener(MainActivity.this);
+        bt5.setOnClickListener(MainActivity.this);
     }
 
     @Override
@@ -48,6 +52,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt3:
                 startActivity(RotateAndScaleActivity.class);
+                break;
+            case R.id.bt4:
+                startActivity(MyPopActivity.class);
+                break;
+            case R.id.bt5:
+                startActivity(MyDiaActivity.class);
                 break;
         }
     }

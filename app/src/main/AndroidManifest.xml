@@ -20,6 +20,10 @@
         </activity>
         <activity android:name=".activity.MySwitchActivity">
         </activity>
+        <activity android:name=".activity.MyPopActivity">
+        </activity>
+        <activity android:name=".activity.MyDiaActivity">
+        </activity>
     </application>
 
 </manifest>

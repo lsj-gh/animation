@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:padding="20dp"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:padding="20dp">
 
     <Button
         android:id="@+id/bt1"
@@ -13,18 +13,31 @@
 
     <Button
         android:id="@+id/bt2"
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="开关效果"
         />
 
     <Button
         android:id="@+id/bt3"
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="搜索等旋转"/>
+
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="左侧弹窗弹出"/>
+    <Button
+        android:id="@+id/bt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="正常弹窗弹出"/>
 
 
 </LinearLayout>
