@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import android.view.View;
 
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
@@ -51,16 +52,18 @@ public class MyPopActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void popShow() {
-        if(include.getVisibility() == View.GONE){
+        if (include.getVisibility() == View.GONE) {
             Animation in = AnimationUtils.loadAnimation(this, R.anim.pop_left_in);
+            in.setInterpolator(new AccelerateDecelerateInterpolator());
             include.startAnimation(in);
             include.setVisibility(View.VISIBLE);
         }
     }
 
     private void popDismiss() {
-        if (include.getVisibility() == View.VISIBLE){
+        if (include.getVisibility() == View.VISIBLE) {
             Animation out = AnimationUtils.loadAnimation(this, R.anim.pop_left_out);
+            out.setInterpolator(new AccelerateDecelerateInterpolator());
             include.startAnimation(out);
             include.setVisibility(View.GONE);
         }

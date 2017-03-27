@@ -5,8 +5,9 @@
         android:fromXDelta="0%p"
         android:toXDelta="-100%p"
         />
+    <!--这里可以设置透明度-->
     <alpha
         android:duration="1000"
         android:fromAlpha="1.0"
-        android:toAlpha="0.5"/>
+        android:toAlpha="1.0"/>
 </set>
