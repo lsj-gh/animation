@@ -33,7 +33,12 @@
         android:layout_marginTop="20dp"
         android:text="6、开关及滑动"
         />
-
+    <Button
+        android:id="@+id/bt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="8、查看图片"/>
     <Button
         android:id="@+id/bt6"
         android:layout_width="wrap_content"
@@ -53,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="12、弹窗"/>
+
 
 
 </LinearLayout>
