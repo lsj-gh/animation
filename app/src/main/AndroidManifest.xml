@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".activity.MyNewCallActivity">
         </activity>
+        <activity android:name=".activity.MyTopDiaActivity">
+        </activity>
     </application>
 
 </manifest>

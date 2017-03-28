@@ -47,6 +47,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="11、弹窗"/>
+    <Button
+        android:id="@+id/bt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="12、弹窗"/>
 
 
 </LinearLayout>
